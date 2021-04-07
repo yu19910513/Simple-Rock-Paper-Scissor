@@ -1,3 +1,5 @@
+var gameTime = game ();
+function game (){
 var choiceOfThree = window.prompt("Let's Play rock, paper or scissor!");
 var computerChoice = Math.random();
         if (computerChoice < 0.34) {
@@ -12,8 +14,7 @@ else if (computerChoice === choiceOfThree) {
         window.alert("It's a tie!")}
 else if ((computerChoice == "rock" && choiceOfThree == "scissor")||(computerChoice == "scissor" && choiceOfThree == "paper")||(computerChoice == "paper" && choiceOfThree == "rock")){
         window.alert("you lost!")}
-else { window.alert("you won!")}
+else if ((computerChoice == "scissor" && choiceOfThree == "rock")||(computerChoice == "paper" && choiceOfThree == "scissor")||(computerChoice == "rock" && choiceOfThree == "paper")){
+        window.alert("you won!")}
 var playagain = window.confirm("again?")
-if (playagain) {againGame()}
-function againGame (){
-    choiceOfThree = window.prompt("Let's Play rock, paper or scissor!")}
+if (playagain) {game()}}
